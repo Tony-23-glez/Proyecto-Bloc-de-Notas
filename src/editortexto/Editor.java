@@ -4,12 +4,17 @@
  */
 package editortexto;
 
+import java.awt.Graphics;
+import java.awt.GraphicsEnvironment;
+import java.awt.PrintJob;
+import java.awt.Toolkit;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Properties;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JFileChooser;
@@ -75,6 +80,8 @@ public class Editor extends javax.swing.JFrame {
         jMenuItem20 = new javax.swing.JMenuItem();
         jMenuItem21 = new javax.swing.JMenuItem();
         mnuFormat = new javax.swing.JMenu();
+        jMenuItem3 = new javax.swing.JMenuItem();
+        jMenuItem4 = new javax.swing.JMenuItem();
         mnuView = new javax.swing.JMenu();
         mnuHelp = new javax.swing.JMenu();
 
@@ -146,6 +153,11 @@ public class Editor extends javax.swing.JFrame {
 
         jMenuItem7.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_P, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         jMenuItem7.setText("Imprimir");
+        jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem7ActionPerformed(evt);
+            }
+        });
         mnuFile.add(jMenuItem7);
         mnuFile.add(jSeparator2);
 
@@ -214,6 +226,23 @@ public class Editor extends javax.swing.JFrame {
 
         mnuFormat.setMnemonic('f');
         mnuFormat.setText("Formato");
+
+        jMenuItem3.setText("Fuente");
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem3ActionPerformed(evt);
+            }
+        });
+        mnuFormat.add(jMenuItem3);
+
+        jMenuItem4.setText("Fuentes...");
+        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem4ActionPerformed(evt);
+            }
+        });
+        mnuFormat.add(jMenuItem4);
+
         jMenuBar1.add(mnuFormat);
 
         mnuView.setMnemonic('v');
@@ -366,6 +395,32 @@ public class Editor extends javax.swing.JFrame {
 // POR EL MOMENTO NO HAY NADA
     }//GEN-LAST:event_jMenuItem8MouseClicked
 
+    private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
+         Properties defaultProps = new Properties();
+
+        PrintJob print = Toolkit.getDefaultToolkit().getPrintJob(this, "Imprimir", defaultProps);
+        Graphics g = print.getGraphics();
+
+        if (g != null) {
+            g.translate(20, 20);
+            txtaContenido.printAll(g); // AreaPrograma es JTextArea
+        }
+        g.dispose();
+        print.end();
+    }//GEN-LAST:event_jMenuItem7ActionPerformed
+
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
+        String fuentes[] = ge.getAvailableFontFamilyNames();
+        for (String fuente : fuentes) {
+            System.out.println(fuente + "");
+        }        
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
+
+    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+        new Fuente(txtaContenido).setVisible(true);
+    }//GEN-LAST:event_jMenuItem4ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -417,6 +472,8 @@ public class Editor extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem20;
     private javax.swing.JMenuItem jMenuItem21;
+    private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JMenuItem jMenuItem7;
