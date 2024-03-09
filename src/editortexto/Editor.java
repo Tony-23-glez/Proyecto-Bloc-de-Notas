@@ -80,8 +80,8 @@ public class Editor extends javax.swing.JFrame {
         jMenuItem20 = new javax.swing.JMenuItem();
         jMenuItem21 = new javax.swing.JMenuItem();
         mnuFormat = new javax.swing.JMenu();
-        jMenuItem3 = new javax.swing.JMenuItem();
-        jMenuItem4 = new javax.swing.JMenuItem();
+        Fuente = new javax.swing.JMenuItem();
+        FUENTES = new javax.swing.JMenuItem();
         mnuView = new javax.swing.JMenu();
         mnuHelp = new javax.swing.JMenu();
 
@@ -227,21 +227,21 @@ public class Editor extends javax.swing.JFrame {
         mnuFormat.setMnemonic('f');
         mnuFormat.setText("Formato");
 
-        jMenuItem3.setText("Fuente");
-        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+        Fuente.setText("Fuente");
+        Fuente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem3ActionPerformed(evt);
+                FuenteActionPerformed(evt);
             }
         });
-        mnuFormat.add(jMenuItem3);
+        mnuFormat.add(Fuente);
 
-        jMenuItem4.setText("Fuentes...");
-        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+        FUENTES.setText("Fuentes...");
+        FUENTES.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem4ActionPerformed(evt);
+                FUENTESActionPerformed(evt);
             }
         });
-        mnuFormat.add(jMenuItem4);
+        mnuFormat.add(FUENTES);
 
         jMenuBar1.add(mnuFormat);
 
@@ -409,17 +409,17 @@ public class Editor extends javax.swing.JFrame {
         print.end();
     }//GEN-LAST:event_jMenuItem7ActionPerformed
 
-    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+    private void FuenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FuenteActionPerformed
 GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
         String fuentes[] = ge.getAvailableFontFamilyNames();
         for (String fuente : fuentes) {
             System.out.println(fuente + "");
         }        
-    }//GEN-LAST:event_jMenuItem3ActionPerformed
+    }//GEN-LAST:event_FuenteActionPerformed
 
-    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+    private void FUENTESActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FUENTESActionPerformed
         new Fuente(txtaContenido).setVisible(true);
-    }//GEN-LAST:event_jMenuItem4ActionPerformed
+    }//GEN-LAST:event_FUENTESActionPerformed
 
     /**
      * @param args the command line arguments
@@ -457,6 +457,8 @@ GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuItem FUENTES;
+    private javax.swing.JMenuItem Fuente;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem10;
@@ -472,8 +474,6 @@ GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem20;
     private javax.swing.JMenuItem jMenuItem21;
-    private javax.swing.JMenuItem jMenuItem3;
-    private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JMenuItem jMenuItem7;

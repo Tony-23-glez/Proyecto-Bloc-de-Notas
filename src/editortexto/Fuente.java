@@ -95,15 +95,15 @@ public class Fuente extends javax.swing.JFrame {
 
         getContentPane().add(jPanel1, java.awt.BorderLayout.PAGE_START);
 
-        jPanel2.setBackground(new java.awt.Color(102, 255, 102));
+        jPanel2.setBackground(new java.awt.Color(0, 153, 255));
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Muestra:"));
         jPanel2.setLayout(new java.awt.BorderLayout());
 
         muestra.setText("Texto de muestra...");
         jPanel2.add(muestra, java.awt.BorderLayout.PAGE_START);
 
-        jPanel3.setBackground(new java.awt.Color(153, 255, 51));
-        jPanel3.setForeground(new java.awt.Color(204, 255, 102));
+        jPanel3.setBackground(new java.awt.Color(0, 153, 255));
+        jPanel3.setForeground(new java.awt.Color(0, 153, 255));
 
         jButton1.setText("Aceptar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
