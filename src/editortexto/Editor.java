@@ -4,6 +4,7 @@
  */
 package editortexto;
 
+import java.awt.*;
 import java.awt.Graphics;
 import java.awt.GraphicsEnvironment;
 import java.awt.PrintJob;
@@ -83,7 +84,19 @@ public class Editor extends javax.swing.JFrame {
         Fuente = new javax.swing.JMenuItem();
         FUENTES = new javax.swing.JMenuItem();
         mnuView = new javax.swing.JMenu();
+        jMenu1 = new javax.swing.JMenu();
+        mnuTa6 = new javax.swing.JMenuItem();
+        mnuTa8 = new javax.swing.JMenuItem();
+        mnuTa10 = new javax.swing.JMenuItem();
+        mnuTa12 = new javax.swing.JMenuItem();
+        mnuTa14 = new javax.swing.JMenuItem();
+        mnuTa18 = new javax.swing.JMenuItem();
+        mnuTa24 = new javax.swing.JMenuItem();
+        mnuTa36 = new javax.swing.JMenuItem();
+        jMenu2 = new javax.swing.JMenu();
+        mnuSDLa = new javax.swing.JMenuItem();
         mnuHelp = new javax.swing.JMenu();
+        mnuAyuda = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -247,10 +260,100 @@ public class Editor extends javax.swing.JFrame {
 
         mnuView.setMnemonic('v');
         mnuView.setText("Ver");
+
+        jMenu1.setText("Zoom");
+
+        mnuTa6.setText("6");
+        mnuTa6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnuTa6ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(mnuTa6);
+
+        mnuTa8.setText("8");
+        mnuTa8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnuTa8ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(mnuTa8);
+
+        mnuTa10.setText("10");
+        mnuTa10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnuTa10ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(mnuTa10);
+
+        mnuTa12.setText("12");
+        mnuTa12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnuTa12ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(mnuTa12);
+
+        mnuTa14.setText("14");
+        mnuTa14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnuTa14ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(mnuTa14);
+
+        mnuTa18.setText("18");
+        mnuTa18.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnuTa18ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(mnuTa18);
+
+        mnuTa24.setText("24");
+        mnuTa24.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnuTa24ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(mnuTa24);
+
+        mnuTa36.setText("36");
+        mnuTa36.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnuTa36ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(mnuTa36);
+
+        mnuView.add(jMenu1);
+
+        jMenu2.setText("Salto de linea");
+
+        mnuSDLa.setText("Al final");
+        mnuSDLa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnuSDLaActionPerformed(evt);
+            }
+        });
+        jMenu2.add(mnuSDLa);
+
+        mnuView.add(jMenu2);
+
         jMenuBar1.add(mnuView);
 
         mnuHelp.setMnemonic('y');
         mnuHelp.setText("Ayuda");
+
+        mnuAyuda.setText("Ir a la ayuda");
+        mnuAyuda.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnuAyudaActionPerformed(evt);
+            }
+        });
+        mnuHelp.add(mnuAyuda);
+
         jMenuBar1.add(mnuHelp);
 
         setJMenuBar(jMenuBar1);
@@ -268,7 +371,7 @@ public class Editor extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 265, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 266, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -421,6 +524,79 @@ GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
         new Fuente(txtaContenido).setVisible(true);
     }//GEN-LAST:event_FUENTESActionPerformed
 
+    private void mnuTa6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuTa6ActionPerformed
+        int tamaño=12;
+        tamaño=tamaño-6;
+        Font fuente=txtaContenido.getFont();
+        txtaContenido.setFont(new Font (fuente.getFontName(), fuente.getStyle(), tamaño));
+    }//GEN-LAST:event_mnuTa6ActionPerformed
+
+    private void mnuTa8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuTa8ActionPerformed
+        int tamaño=12;
+        tamaño=tamaño-4;
+        Font fuente=txtaContenido.getFont();
+        txtaContenido.setFont(new Font (fuente.getFontName(), fuente.getStyle(), tamaño));
+    }//GEN-LAST:event_mnuTa8ActionPerformed
+
+    private void mnuTa10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuTa10ActionPerformed
+        int tamaño=12;
+        tamaño=tamaño-2;
+        Font fuente=txtaContenido.getFont();
+        txtaContenido.setFont(new Font (fuente.getFontName(), fuente.getStyle(), tamaño));
+    }//GEN-LAST:event_mnuTa10ActionPerformed
+
+    private void mnuTa12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuTa12ActionPerformed
+        int tamaño=12;
+        Font fuente=txtaContenido.getFont();
+        txtaContenido.setFont(new Font (fuente.getFontName(), fuente.getStyle(), tamaño));
+    }//GEN-LAST:event_mnuTa12ActionPerformed
+
+    private void mnuTa14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuTa14ActionPerformed
+        int tamaño=12;
+        tamaño=tamaño+2;
+        Font fuente=txtaContenido.getFont();
+        txtaContenido.setFont(new Font (fuente.getFontName(), fuente.getStyle(), tamaño));
+    }//GEN-LAST:event_mnuTa14ActionPerformed
+
+    private void mnuTa18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuTa18ActionPerformed
+        int tamaño=12;
+        tamaño=tamaño+6;
+        Font fuente=txtaContenido.getFont();
+        txtaContenido.setFont(new Font (fuente.getFontName(), fuente.getStyle(), tamaño));
+    }//GEN-LAST:event_mnuTa18ActionPerformed
+
+    private void mnuTa24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuTa24ActionPerformed
+        int tamaño=12;
+        tamaño=tamaño+12;
+        Font fuente=txtaContenido.getFont();
+        txtaContenido.setFont(new Font (fuente.getFontName(), fuente.getStyle(), tamaño));
+    }//GEN-LAST:event_mnuTa24ActionPerformed
+
+    private void mnuTa36ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuTa36ActionPerformed
+        int tamaño=12;
+        tamaño=tamaño+24;
+        Font fuente=txtaContenido.getFont();
+        txtaContenido.setFont(new Font (fuente.getFontName(), fuente.getStyle(), tamaño));
+    }//GEN-LAST:event_mnuTa36ActionPerformed
+
+    private void mnuSDLaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuSDLaActionPerformed
+        String SDL= txtaContenido.getText();
+        SDL=SDL.replaceAll("\\r?\\n", "\r\n");
+        txtaContenido.setText(SDL);
+        
+    }//GEN-LAST:event_mnuSDLaActionPerformed
+
+    private void mnuAyudaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuAyudaActionPerformed
+        abrirURL("https://support.microsoft.com/es-ES");
+    }//GEN-LAST:event_mnuAyudaActionPerformed
+
+    private void abrirURL(String url) {
+        try {
+            Desktop.getDesktop().browse(new java.net.URI(url));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
     /**
      * @param args the command line arguments
      */
@@ -459,6 +635,8 @@ GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuItem FUENTES;
     private javax.swing.JMenuItem Fuente;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem10;
@@ -485,12 +663,22 @@ GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
     private javax.swing.JPopupMenu.Separator jSeparator3;
     private javax.swing.JPopupMenu.Separator jSeparator4;
     private javax.swing.JPopupMenu.Separator jSeparator5;
+    private javax.swing.JMenuItem mnuAyuda;
     private javax.swing.JMenu mnuEdit;
     private javax.swing.JMenu mnuFile;
     private javax.swing.JMenuItem mnuFileOpen;
     private javax.swing.JMenuItem mnuFileSave;
     private javax.swing.JMenu mnuFormat;
     private javax.swing.JMenu mnuHelp;
+    private javax.swing.JMenuItem mnuSDLa;
+    private javax.swing.JMenuItem mnuTa10;
+    private javax.swing.JMenuItem mnuTa12;
+    private javax.swing.JMenuItem mnuTa14;
+    private javax.swing.JMenuItem mnuTa18;
+    private javax.swing.JMenuItem mnuTa24;
+    private javax.swing.JMenuItem mnuTa36;
+    private javax.swing.JMenuItem mnuTa6;
+    private javax.swing.JMenuItem mnuTa8;
     private javax.swing.JMenu mnuView;
     private javax.swing.JTextArea txtaContenido;
     // End of variables declaration//GEN-END:variables
