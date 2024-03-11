@@ -30,7 +30,7 @@ import javax.swing.filechooser.FileNameExtensionFilter;
  *
  * @author TECMM PROFESOR
  */
-public class Editor extends javax.swing.JFrame {
+public class EditorVentNueva extends javax.swing.JFrame {
     
     String ruta = "";
     String titulo;
@@ -39,7 +39,7 @@ public class Editor extends javax.swing.JFrame {
     /**
      * Creates new form Editor
      */
-    public Editor() {
+    public EditorVentNueva() {
         initComponents();
         titulo = "Sin titulo";
         setTitle(titulo + ": Editor");
@@ -730,20 +730,21 @@ GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Editor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(EditorVentNueva.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Editor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(EditorVentNueva.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Editor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(EditorVentNueva.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Editor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(EditorVentNueva.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Editor().setVisible(true);
+                new EditorVentNueva().setVisible(true);
             }
         });
     }
